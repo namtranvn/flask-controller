@@ -47,4 +47,4 @@ jobs:
         docker push hoainamtran204/flask-controller:v1
     - name: Run docker app
       run: |
-        docker compose up
+        docker compose -f docker-compose.yaml up -d
