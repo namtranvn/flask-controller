@@ -45,3 +45,6 @@ jobs:
         docker login -u hoainamtran204@gmail.com -p phaocaoxa
         docker tag flask-controller:v1 hoainamtran204/flask-controller:v1
         docker push hoainamtran204/flask-controller:v1
+    - name: Run docker app
+      run: |
+        docker compose up
