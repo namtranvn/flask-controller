@@ -9,7 +9,7 @@ docker push hoainamtran204/flask-controller:v1
 
 docker run -td flask-controller:v1
 
-docker exec -it containerid bash
+docker exec -it containerid sh
 
 
 docker tag docker-new-build:latest dockerhub-username/name-of-repo:latest
@@ -38,9 +38,8 @@ kubectl get csr dev-nam -o jsonpath='{.status.certificate}'| base64 -d > dev-nam
 
 echo ‘’ | base64 — decode > dev-nam.crt
 
-cat dev-nam.crt | base64 | -w 0
 
-### 
+### kubernetes
 kubectl apply -f controller_deployment.yaml
 kubectl apply -f controller_service.yaml
 kubectl apply -f mutating_admission_webhook.yaml
@@ -48,3 +47,14 @@ kubectl apply -f mutating_admission_webhook.yaml
 kubectl delete -f controller_deployment.yaml
 kubectl delete -f controller_service.yaml
 kubectl delete -f mutating_admission_webhook.yaml
+
+
+### git 
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/namtranvn/flask-controller.git
+git push -u origin main
+
+git push --set-upstream origin master

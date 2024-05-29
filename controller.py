@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 import base64
 import jsonpatch
 admission_controller = Flask(__name__)
+@admission_controller.route('/', methods=['GET'])
+def hello():
+    return "Hello"
+
 @admission_controller.route('/mutate/deployments', methods=['POST'])
 def deployment_webhook_mutate():
     request_info = request.get_json()
