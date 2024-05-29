@@ -49,3 +49,4 @@ jobs:
       run: |
         docker compose -f docker-compose.yaml up -d
         docker compose ps
+        ngrok http 5000

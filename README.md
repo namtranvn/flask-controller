@@ -52,7 +52,7 @@ kubectl delete -f mutating_admission_webhook.yaml
 ### git 
 git init
 git add .
-git commit -m "Add pytest"
+git commit -m "Add Ngrok"
 git branch -M main
 git remote add origin https://github.com/namtranvn/flask-controller.git
 git push -u origin main
