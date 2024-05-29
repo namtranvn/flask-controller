@@ -18,4 +18,3 @@ def admission_response_patch(allowed, message, json_patch):
                                  "patch": base64_patch}})
 if __name__ == '__main__':
     admission_controller.run(host='0.0.0.0', port=443, ssl_context=("/app/certs/dev-nam.crt", "/app/certs/dev-nam.key"))
-    # admission_controller.run(host='0.0.0.0', port=5000)
