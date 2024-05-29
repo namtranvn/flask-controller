@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: controller-deployment
+  labels:
+    app: flask-controller
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-controller
+  template:
+    metadata:
+      labels:
+        app: flask-controller
+    spec:
+      containers:
+      - name: flask-controller
+        image: hoainamtran204/flask-controller:v1
+        ports:
+        - containerPort: 443
