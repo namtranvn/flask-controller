@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: nginx
+    webhook-enabled: "true"
   name: nginx
 spec:
   selector:

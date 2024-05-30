@@ -4,7 +4,7 @@ metadata:
   name: controller-service
 spec:
   selector:
-    app.kubernetes.io/name: flask-controller
+    app: flask-controller
   ports:
     - protocol: TCP
       port: 443

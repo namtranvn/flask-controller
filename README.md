@@ -58,3 +58,5 @@ git remote add origin https://github.com/namtranvn/flask-controller.git
 git push -u origin main
 
 git push --set-upstream origin master
+
+ngrok http 443
