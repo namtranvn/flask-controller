@@ -59,6 +59,6 @@ git push -u origin main
 
 git push --set-upstream origin master
 
-ngrok http 443 
+ngrok http 443
 
 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
