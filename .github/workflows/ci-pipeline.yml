@@ -39,7 +39,7 @@ jobs:
         pytest
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag flask-controller:v1 --platform=windows/adm64
+        docker build . --file Dockerfile --tag flask-controller:v1
     - name: Push image to dockerhub
       run: |
         docker login -u hoainamtran204@gmail.com -p phaocaoxa
