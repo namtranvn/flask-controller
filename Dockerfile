@@ -1,7 +1,7 @@
 
 # FROM python:3.8-alpine
-# FROM python:3.10-buster
-FROM mcr.microsoft.com/devcontainers/python:3.10:ltsc2019
+# FROM python:3.8-buster
+FROM mcr.microsoft.com/devcontainers/python:3.8
 
 WORKDIR /app
 
