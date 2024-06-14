@@ -1,0 +1,32 @@
+# do not use "latest" here, if you want this to work in the future
+image: docker:24.0.7
+
+services:
+  - docker:24.0.7-dind
+
+stages:
+  - build
+
+before_script:
+  - docker version
+  - docker login -u hoainamtran204@gmail.com -p phaocaoxa
+  - python -m pip install --upgrade pip
+  - pip install flake8 pytest
+  - pip install -r requirements.txt 
+
+build:
+  stage: build
+  script:
+    - docker build -t flask-controller100:v1 .
+    - docker login
+    - docker tag flask-controller100:v1 hoainamtran204/flask-controller100:v1
+    - docker push hoainamtran204/flask-controller100:v1
+
+test:
+  stage: test
+  script:
+    - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - pytest
+
+

@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from controller import admission_controller
+from main import main
 
 def test_index_route():
     response = admission_controller.test_client().get('/')

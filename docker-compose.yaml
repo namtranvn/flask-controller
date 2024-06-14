@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app:
     container_name: controller
-    image: hoainamtran204/flask-controller:v1
+    image: hoainamtran204/flask-controller100:v1
     ports:
-      - "443:443"
+      - "5000:5000"
     restart: unless-stopped
